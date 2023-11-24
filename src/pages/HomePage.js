@@ -7,6 +7,9 @@ import Container from "../components/Container";
 import styles from "./HomePage.module.css";
 
 const HomePage = () => {
+  const openUrl = (url) => {
+    window.open(url, '_blank');
+  };
   return (
     <div className={styles.homePage}>
       <img className={styles.groupIcon} alt="" src="/group.svg" />
@@ -24,14 +27,14 @@ const HomePage = () => {
       <b className={styles.worldsFirstVideoFirstContainer}>
         <p
           className={styles.worldsFirstVideoFirst}
-        >{`World's First Video-First `}</p>
-        <p className={styles.worldsFirstVideoFirst}>Property Experience</p>
+        >{`World’s First Video-Based `}</p>
+        <p className={styles.worldsFirstVideoFirst}>Proptech Platform</p>
       </b>
       <div className={styles.homePageChild} />
       <div className={styles.groupParent}>
         <div className={styles.image3Parent}>
-          <img className={styles.image3Icon} alt="" src="/image-3@2x.png" />
-          <img className={styles.image4Icon} alt="" src="/image-4@2x.png" />
+          <img className={styles.image3Icon} alt="" src="/image-3@2x.png" onClick={() => alert('App will be launching Soon')} />
+          <img className={styles.image4Icon} alt="" src="/image-4@2x.png" onClick={() => alert('App will be launching Soon')} />
         </div>
         <div className={styles.downloadNow}>Download Now</div>
       </div>
@@ -104,9 +107,9 @@ const HomePage = () => {
         src="/hugeiconinterfacesolidbookmark.svg"
       />
       <Container />
-      <div className={styles.searchPropertiesWrapper}>
+      {/* <div className={styles.searchPropertiesWrapper}>
         <div className={styles.searchProperties}>Search properties</div>
-      </div>
+      </div> */}
     </div>
   );
 };

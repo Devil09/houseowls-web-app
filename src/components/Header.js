@@ -1,7 +1,13 @@
 import { useMemo } from "react";
 import styles from "./Header.module.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = ({ whatsAppImage20231022At0FontWeight }) => {
+
+  const navigate = useNavigate();
+  const navigateToContactUs = () => navigate('/contact-us')
+  const navigateToHome = () => navigate('/')
+
   const homeStyle = useMemo(() => {
     return {
       fontWeight: whatsAppImage20231022At0FontWeight,
@@ -14,13 +20,14 @@ const Header = ({ whatsAppImage20231022At0FontWeight }) => {
         <div className={styles.topBarChild} />
         <div className={styles.button}>
           <div className={styles.buttonChild} />
-          <b className={styles.contactUs}>Contact Us</b>
+          <div className={styles.contactUs} onClick={navigateToContactUs}>Contact Us</div>
+          {/* <Link to="/contact-us">Clik me</Link> */}
         </div>
-        <div className={styles.tabs}>
-          <b className={styles.home} style={homeStyle}>
+        <div className={styles.tabs} onClick={navigateToHome}>
+          <b className={styles.home} style={homeStyle} >
             Home
           </b>
-          <div className={styles.home}>About us</div>
+          {/* <div className={styles.home}>About us</div> */}
         </div>
       </div>
       <img
