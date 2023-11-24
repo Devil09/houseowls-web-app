@@ -40,6 +40,7 @@ body {
   --color-darkslategray-400: rgba(51, 51, 51, 0.6);
   --white: #fff;
   --color-tomato-100: #f7524b;
+  --color-tomato-onclick: #e4251e;
   --color-tomato-200: rgba(247, 82, 75, 0.4);
   --color-tomato-300: rgba(247, 82, 75, 0.1);
   --color-lavenderblush: #ffeeed;

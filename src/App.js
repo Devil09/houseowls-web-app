@@ -7,6 +7,9 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ContactUs from "./pages/ContactUs";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+
 
 function App() {
   const action = useNavigationType();
@@ -32,6 +35,14 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/terms":
+        title = "";
+        metaDescription = "";
+        break;  
+      case "/privacy":
+        title = "";
+        metaDescription = "";
+        break;    
     }
 
     if (title) {
@@ -52,6 +63,9 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/contact-us" element={<ContactUs />} />
+      <Route path="/terms" element={<TermsAndConditions />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+
     </Routes>
   );
 }
