@@ -19,7 +19,7 @@ const ContactUs = () => {
       />
       <div className={styles.contactUsItem} />
       <b className={styles.contactUs1}>Contact Us</b>
-      <Basedonthegivencontext />
+      
       <HomeContainer propRight="unset" propLeft="0px" />
       <Header whatsAppImage20231022At0FontWeight="unset" />
       <PhoneFormContainer1 />
