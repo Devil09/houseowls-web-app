@@ -60,13 +60,15 @@ function App() {
   }, [pathname]);
 
   return (
-    <Routes>
+      
+      <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/terms" element={<TermsAndConditions />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
 
     </Routes>
+    
   );
 }
 export default App;
