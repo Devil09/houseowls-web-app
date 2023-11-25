@@ -4,6 +4,7 @@ import {
   Route,
   useNavigationType,
   useLocation,
+  Router,
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ContactUs from "./pages/ContactUs";
@@ -60,14 +61,18 @@ function App() {
   }, [pathname]);
 
   return (
+    
       
-      <Routes>
+   <Routes>
+
       <Route path="/" element={<HomePage />} />
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/terms" element={<TermsAndConditions />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
 
     </Routes>
+
+    
     
   );
 }
