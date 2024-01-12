@@ -7,7 +7,8 @@
       "namespace": "android_app",
       "package_name": "com.houseowls.houseowls_mob",
       "sha256_cert_fingerprints": [
-        "DB:B0:31:84:E1:3C:21:D6:81:B5:36:D9:B6:A2:FC:56:2B:82:68:D6:CC:5A:16:68:45:C9:3D:72:BA:10:C6:E0"
+        "DB:B0:31:84:E1:3C:21:D6:81:B5:36:D9:B6:A2:FC:56:2B:82:68:D6:CC:5A:16:68:45:C9:3D:72:BA:10:C6:E0",
+        "E0:A1:E8:D2:CD:F4:A8:33:FD:11:CA:2F:D5:C8:19:B6:A9:7F:71:CF:69:AB:E5:58:36:B2:78:FB:1F:22:AC:90"
       ]
     }
   }
