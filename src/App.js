@@ -1,79 +1,31 @@
-import { useEffect } from "react";
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-  Router,
-} from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import ContactUs from "./pages/ContactUs";
-import TermsAndConditions from "./pages/TermsAndConditions";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-
+import logo from './logo.svg';
+import './App.css';
+import Main from './Component/Home/Main.js';
+import NavBar from '../src//Component/Home/NavBar.js';
+import ContactUs from './Component/contactus/ContactUs.js';
+// import privacy from './Component/privacy/privacy.js';
+import FooTer from '../src/Component/Home/FooTer.js';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import PrivacyMain from './Component/privacy/PrivacyMain.js';
+import TermMain from './Component/Yerm condition/TermMain.js';
 
 function App() {
-  const action = useNavigationType();
-  const location = useLocation();
-  const pathname = location.pathname;
-
-  useEffect(() => {
-    if (action !== "POP") {
-      window.scrollTo(0, 0);
-    }
-  }, [action, pathname]);
-
-  useEffect(() => {
-    let title = "";
-    let metaDescription = "";
-
-    switch (pathname) {
-      case "/":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/contact-us":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/terms":
-        title = "";
-        metaDescription = "";
-        break;  
-      case "/privacy":
-        title = "";
-        metaDescription = "";
-        break;    
-    }
-
-    if (title) {
-      document.title = title;
-    }
-
-    if (metaDescription) {
-      const metaDescriptionTag = document.querySelector(
-        'head > meta[name="description"]'
-      );
-      if (metaDescriptionTag) {
-        metaDescriptionTag.content = metaDescription;
-      }
-    }
-  }, [pathname]);
-
   return (
-    
-      
-   <Routes>
+    <div className="App">
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/Contact-us" element={<ContactUs />} />
+          <Route path='/privacy' element={<PrivacyMain />} />
+          <Route path='/terms' element={<TermMain />} />
+        </Routes>
+        <FooTer />
+      </BrowserRouter>
 
-      <Route path="/" element={<HomePage />} />
-      <Route path="/contact-us" element={<ContactUs />} />
-      <Route path="/terms" element={<TermsAndConditions />} />
-      <Route path="/privacy" element={<PrivacyPolicy />} />
 
-    </Routes>
-
-    
-    
-  );
+    </div>
+  )
 }
+
 export default App;

@@ -1,0 +1,16 @@
+.center1{
+    background-image: url(../image/rectangle-975@2x.png);
+    height: 400px;
+
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center1 h2{
+    font-size: 38px;
+    color: white;
+}
